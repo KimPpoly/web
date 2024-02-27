@@ -1,0 +1,32 @@
+.icon {
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.login {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.instalogin {
+    color: #fff;
+    height: 50px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: rgb(245, 78, 154);
+    border: 1px solid aquamarine;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.insta {
+    width: 30px;
+    margin-top: 9px;
+    margin-bottom: -7px;
+}
